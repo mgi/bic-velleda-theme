@@ -1,8 +1,9 @@
-;;; velleda-theme.el --- Custom theme for faces
+;;; bic-velleda-theme.el --- Custom theme for faces
 
 ;; Copyright (C) 2011-2012 Free Software Foundation, Inc.
 
 ;; Author: Scott Frazer <frazer.scott@gmail.com>
+;;         Manuel Giraud
 
 ;; This file is part of GNU Emacs.
 
@@ -21,12 +22,21 @@
 
 ;;; Code:
 
-(deftheme velleda
+(deftheme bic-velleda
   "Face colors similar to markers on a whiteboard.")
 
-(let ((class '((class color) (min-colors 89))))
+(let ((class '((class color) (min-colors 89)))
+      (red "#D71C22")
+      (blue "#006BB7")
+      (orange "#F9A01B")
+      (turquoise "#00B9F1")
+      (purple "#972A7D")
+      (brown "peru")
+      (black "black")
+      (green "#00A77E"))
+  ;; Colors from BIC website.
   (custom-theme-set-faces
-   'velleda
+   'bic-velleda
    `(Info-title-1-face ((,class (:family "helv" :weight bold :height 1.728))))
    `(Info-title-2-face ((,class (:family "helv" :weight bold :height 1.44))))
    `(Info-title-3-face ((,class (:family "helv" :weight bold :height 1.2))))
@@ -38,7 +48,7 @@
    `(cperl-array-face ((,class (:foreground "SlateBlue3"))))
    `(cperl-hash-face ((,class (:foreground "turquoise3"))))
    `(cperl-nonoverridable-face ((,class (:foreground "orchid3"))))
-   `(cursor ((,class (:background "Green4"))))
+   `(cursor ((,class (:background ,green))))
    `(default ((,class (:background "whitesmoke" :foreground "black"))))
    `(dired-marked ((,class (:background "dodgerblue3" :foreground "white"))))
    `(flymake-errline ((,class (:background nil :underline "red"))))
@@ -88,10 +98,10 @@
    `(show-paren-mismatch-face ((,class (:background "red1" :foreground "white"))))
    `(warning ((,class (:foreground "Yellow4"))))))
 
-(provide-theme 'velleda)
+(provide-theme 'bic-velleda)
 
 ;; Local Variables:
 ;; no-byte-compile: t
 ;; End:
 
-;;; velleda-theme.el ends here
+;;; bic-velleda-theme.el ends here
