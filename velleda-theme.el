@@ -1,4 +1,4 @@
-;;; whiteboard-theme.el --- Custom theme for faces
+;;; velleda-theme.el --- Custom theme for faces
 
 ;; Copyright (C) 2011-2012 Free Software Foundation, Inc.
 
@@ -21,12 +21,12 @@
 
 ;;; Code:
 
-(deftheme mgi-whiteboard
+(deftheme velleda
   "Face colors similar to markers on a whiteboard.")
 
 (let ((class '((class color) (min-colors 89))))
   (custom-theme-set-faces
-   'mgi-whiteboard
+   'velleda
    `(Info-title-1-face ((,class (:family "helv" :weight bold :height 1.728))))
    `(Info-title-2-face ((,class (:family "helv" :weight bold :height 1.44))))
    `(Info-title-3-face ((,class (:family "helv" :weight bold :height 1.2))))
@@ -88,10 +88,10 @@
    `(show-paren-mismatch-face ((,class (:background "red1" :foreground "white"))))
    `(warning ((,class (:foreground "Yellow4"))))))
 
-(provide-theme 'mgi-whiteboard)
+(provide-theme 'velleda)
 
 ;; Local Variables:
 ;; no-byte-compile: t
 ;; End:
 
-;;; whiteboard-theme.el ends here
+;;; velleda-theme.el ends here
