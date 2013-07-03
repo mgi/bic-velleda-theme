@@ -156,17 +156,16 @@
    `(mm-uu-extract ((,class (:foreground ,black :background ,green))))
 
    ;; Message
-   ;; `(message-header-name ((,class (:foreground ,gg))))
-   ;; `(message-header-cc ((,class (:foreground ,gg))))
-   ;; `(message-header-other ((,class (:foreground ,gg))))
-   ;; `(message-header-subject ((,class (:foreground ,gg))))
-   ;; `(message-header-to ((,class (:weight bold :foreground ,gg))))
-   ;; `(message-header-xheader ((,class (:foreground ,gg))))
-   ;; `(message-header-newsgroups ((,class (:weight bold :foreground ,ig))))
-   ;; `(message-cited-text ((,class (:slant italic :foreground ,gg))))
-   ;; `(message-mml ((,class (:foreground ,hg))))
-   ;; `(message-separator ((,class (:weight bold :foreground ,gg))))
-   ))
+   `(message-header-name ((,class (:foreground ,brown))))
+   `(message-header-cc ((,class (:foreground ,green))))
+   `(message-header-other ((,class (:foreground ,brown))))
+   `(message-header-subject ((,class (:foreground ,blue))))
+   `(message-header-to ((,class (:weight bold :foreground ,red))))
+   `(message-header-xheader ((,class (:foreground ,purple))))
+   `(message-header-newsgroups ((,class (:weight bold :foreground ,purple))))
+   `(message-separator ((,class (:foreground ,black))))
+   `(message-cited-text ((,class (:foreground ,brown))))
+   `(message-mml ((,class (:foreground ,purple))))))
 
 (provide-theme 'bic-velleda)
 
