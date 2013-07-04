@@ -34,8 +34,8 @@
         (purple "#972a7d")
         (brown "burlywood4")
         (green "#00a77e"))
+    ;; Colors from the BIC website's CSS.
 
-    ;; Get colors from BIC website's CSS.
     (custom-theme-set-faces
      'bic-velleda
 
@@ -45,7 +45,7 @@
      ;; Highlighting
      `(fringe ((,class (:background ,bg))))
      `(highlight ((,class (:background ,turquoise))))
-     `(region ((,class (:background ,turquoise))))
+     `(region ((,class (:background ,purple))))
      `(warning ((,class (:foreground ,purple :weight bold))))
      `(error ((,class (:foreground ,red :weight bold))))
      `(show-paren-match-face ((,class (:background ,turquoise :foreground ,bg))))
