@@ -180,7 +180,26 @@
      `(eshell-ls-missing ((,class (:foreground ,red :weight bold))))
      `(eshell-ls-product ((,class (:foreground ,brown))))
      `(eshell-ls-readonly ((,class (:foreground ,blue))))
-     `(eshell-ls-special ((,class (:foreground ,turquoise :weight bold)))))))
+     `(eshell-ls-special ((,class (:foreground ,turquoise :weight bold))))
+
+     ;; w3m
+     `(w3m-anchor ((,class (:inherit link))))
+     `(w3m-arrived-anchor ((,class (:inherit link-visited))))
+     `(w3m-form ((,class (:foreground ,turquoise :underline t))))
+     `(w3m-header-line-location-title ((,class (:foreground ,blue))))
+     `(w3m-header-line-location-content ((,class (:foreground ,green))))
+     `(w3m-image-anchor ((,class)))
+     `(w3m-image ((,class (:foreground ,green))))
+     `(w3m-session-select ((,class (:foreground ,blue))))
+     `(w3m-session-selected ((,class (:inherit w3m-session-select :underline t :weight bold))))
+     `(w3m-tab-background ((,class (:background ,bg :foreground ,bg))))
+     `(w3m-tab-selected-background ((,class (:background ,bg :foreground ,bg))))
+     `(w3m-tab-mouse ((,class (:background ,ml-active :foreground ,bg))))
+     `(w3m-tab-selected ((,class (:background ,ml-active :foreground ,fg :bold t))))
+     `(w3m-tab-unselected ((,class (:background ,ml-inactive :foreground ,fg))))
+     `(w3m-tab-selected-retrieving ((,class (:background ,ml-active :foreground ,red :bold t))))
+     `(w3m-tab-unselected-retrieving ((,class (:background ,ml-inactive :foreground ,red))))
+     `(w3m-tab-unselected-unseen ((,class (:background ,ml-inactive :foreground ,turquoise)))))))
 
 (defun bic-velleda-bright ()
   "Bright version of Bic Velleda theme."
