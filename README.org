@@ -1,0 +1,24 @@
+* What
+  This a color theme for emacs 24 that micmics Velleda whiteboard with
+  Bic markers. It is inspired from the bundled whiteboard-theme. It
+  features a bright and a dark version (not really a whiteboard
+  anymore!)
+
+[[./bright.png]] [[./dark.png]]
+
+* Usage
+#+BEGIN_SRC sh
+$ cd SOMEWHERE
+$ git clone http://github.com/mgi/bic-velleda-theme
+$ cat << EOF >> $HOME/.emacs
+> (add-to-list 'load-path "SOMEWHERE/bic-velleda-theme/")
+> (add-to-list 'custom-theme-load-path "SOMEWHERE/bic-velleda-theme/")
+> (load "bic-velleda-theme")
+> (bic-velleda-bright)
+> (load-theme 'bic-velleda t)
+> EOF
+$
+#+END_SRC
+
+The theme also defines a =bic-velleda-toggle= function to toggle
+between dark and bright version.
