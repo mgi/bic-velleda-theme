@@ -50,6 +50,7 @@
      `(error ((,class (:foreground ,red :weight bold))))
      `(success ((,class (:foreground ,green :weight bold))))
      `(escape-glyph ((,class (:foreground ,brown))))
+     `(shadow ((,class (:foreground ,brown))))
      `(show-paren-match-face ((,class (:background ,turquoise :foreground ,bg))))
      `(show-paren-mismatch-face ((,class (:background ,red :foreground ,bg))))
      `(isearch ((,class (:background ,red :foreground ,bg))))
@@ -166,7 +167,20 @@
      `(message-header-newsgroups ((,class (:weight bold :foreground ,purple))))
      `(message-separator ((,class (:foreground ,fg))))
      `(message-cited-text ((,class (:foreground ,brown))))
-     `(message-mml ((,class (:foreground ,purple)))))))
+     `(message-mml ((,class (:foreground ,purple))))
+
+     ;; EShell
+     `(eshell-prompt ((,class (:foreground ,red :bold t))))
+     `(eshell-ls-directory ((,class (:inherit dired-directory))))
+     `(eshell-ls-symlink ((,class (:inherit dired-symlink))))
+     `(eshell-ls-archive ((,class (:foreground ,purple))))
+     `(eshell-ls-backup ((,class (:foreground ,brown))))
+     `(eshell-ls-clutter ((,class (:foreground ,brown))))
+     `(eshell-ls-executable ((,class (:foreground ,green :weight bold))))
+     `(eshell-ls-missing ((,class (:foreground ,red :weight bold))))
+     `(eshell-ls-product ((,class (:foreground ,brown))))
+     `(eshell-ls-readonly ((,class (:foreground ,blue))))
+     `(eshell-ls-special ((,class (:foreground ,turquoise :weight bold)))))))
 
 (defun bic-velleda-bright ()
   "Bright version of Bic Velleda theme."
