@@ -25,15 +25,8 @@
 (deftheme bic-velleda
   "Face colors similar to markers on a whiteboard.")
 
-(defun bic-velleda-brightp ()
-  (string= (face-attribute 'default :foreground) "black"))
-
-(defun bic-velleda-toggle ()
-  "Toggle between bright/dark version of the theme."
-  (interactive)
+(defun bic-velleda-set (fg bg ml-active ml-inactive)
   (let ((class '((class color) (min-colors 89)))
-        (white (if (bic-velleda-brightp) "black" "whitesmoke"))
-        (black (if (bic-velleda-brightp) "whitesmoke" "black"))
         (red "#d71c22")
         (blue "#006bb7")
         (orange "#f9a01b")
@@ -47,25 +40,25 @@
      'bic-velleda
 
      `(cursor ((,class (:background ,green))))
-     `(default ((,class (:background ,white :foreground ,black))))
+     `(default ((,class (:background ,bg :foreground ,fg))))
 
      ;; Highlighting
-     `(fringe ((,class (:background ,white))))
+     `(fringe ((,class (:background ,bg))))
      `(highlight ((,class (:background ,turquoise))))
      `(region ((,class (:background ,turquoise))))
      `(warning ((,class (:foreground ,purple :weight bold))))
      `(error ((,class (:foreground ,red :weight bold))))
-     `(show-paren-match-face ((,class (:background ,turquoise :foreground ,white))))
-     `(show-paren-mismatch-face ((,class (:background ,red :foreground ,white))))
-     `(isearch ((,class (:background ,red :foreground ,white))))
-     `(lazy-highlight ((,class (:background ,turquoise :foreground ,white))))
+     `(show-paren-match-face ((,class (:background ,turquoise :foreground ,bg))))
+     `(show-paren-mismatch-face ((,class (:background ,red :foreground ,bg))))
+     `(isearch ((,class (:background ,red :foreground ,bg))))
+     `(lazy-highlight ((,class (:background ,turquoise :foreground ,bg))))
      `(link ((,class (:foreground ,blue))))
      `(link-visited ((,class (:foreground ,purple))))
 
      ;; Modeline
-     `(mode-line ((,class (:background "gray75" :foreground ,black))))
-     `(mode-line-buffer-id ((,class (:weight bold :foreground ,black))))
-     `(mode-line-inactive ((,class (:background "gray40" :foreground "black"))))
+     `(mode-line ((,class (:background ,ml-active :foreground ,fg))))
+     `(mode-line-buffer-id ((,class (:weight bold :foreground ,fg))))
+     `(mode-line-inactive ((,class (:background ,ml-inactive :foreground ,fg))))
 
      ;; Font lock
      `(font-lock-builtin-face ((,class (:foreground ,orange))))
@@ -138,7 +131,7 @@
      `(gnus-summary-normal-ancient ((,class (:foreground ,blue))))
      `(gnus-summary-normal-read ((,class (:foreground ,brown))))
      `(gnus-summary-normal-ticked ((,class (:foreground ,red))))
-     `(gnus-summary-normal-undownloaded ((,class (:foreground ,black :strike-through t))))
+     `(gnus-summary-normal-undownloaded ((,class (:foreground ,fg :strike-through t))))
      `(gnus-summary-high-ancient ((,class (:inherit gnus-summary-normal-ancient :weight bold))))
      `(gnus-summary-high-read ((,class (:inherit gnus-summary-normal-read :weight bold))))
      `(gnus-summary-high-ticked ((,class (:inherit gnus-summary-normal-ticked :weight bold))))
@@ -147,7 +140,7 @@
      `(gnus-summary-low-read ((,class (:inherit gnus-summary-normal-read :slant italic))))
      `(gnus-summary-low-ticked ((,class (:inherit gnus-summary-normal-ticked :slant italic))))
      `(gnus-summary-low-undownloaded ((,class (:inherit gnus-summary-normal-undownloaded :slant italic))))
-     `(gnus-summary-cancelled ((,class (:foreground ,orange :background ,black))))
+     `(gnus-summary-cancelled ((,class (:foreground ,orange :background ,fg))))
      `(gnus-cite-1 ((,class (:foreground ,blue))))
      `(gnus-cite-2 ((,class (:foreground ,red))))
      `(gnus-cite-3 ((,class (:foreground ,brown))))
@@ -159,7 +152,7 @@
      `(gnus-cite-9 ((,class (:foreground ,red))))
      `(gnus-cite-10 ((,class (:foreground ,brown))))
      `(gnus-cite-11 ((,class (:foreground ,orange))))
-     `(mm-uu-extract ((,class (:foreground ,black :background ,green))))
+     `(mm-uu-extract ((,class (:foreground ,fg :background ,green))))
 
      ;; Message
      `(message-header-name ((,class (:foreground ,brown))))
@@ -169,11 +162,26 @@
      `(message-header-to ((,class (:weight bold :foreground ,red))))
      `(message-header-xheader ((,class (:foreground ,purple))))
      `(message-header-newsgroups ((,class (:weight bold :foreground ,purple))))
-     `(message-separator ((,class (:foreground ,black))))
+     `(message-separator ((,class (:foreground ,fg))))
      `(message-cited-text ((,class (:foreground ,brown))))
      `(message-mml ((,class (:foreground ,purple)))))))
 
-(bic-velleda-toggle)
+(defun bic-velleda-bright ()
+  "Bright version of Bic Velleda theme."
+  (interactive)
+  (bic-velleda-set "black" "whitesmoke" "gray70" "gray40"))
+
+(defun bic-velleda-dark ()
+  "Dark version of Bic Velleda theme."
+  (interactive)
+  (bic-velleda-set "whitesmoke" "black" "gray40" "gray20"))
+
+(defun bic-velleda-toggle ()
+  "Toggle between bright/dark version of the theme."
+  (interactive)
+  (if (string= (face-attribute 'default :foreground) "black")
+      (bic-velleda-dark)
+    (bic-velleda-bright)))
 
 (provide-theme 'bic-velleda)
 
