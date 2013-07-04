@@ -206,7 +206,15 @@
      `(w3m-tab-unselected ((,class (:background ,ml-inactive :foreground ,fg))))
      `(w3m-tab-selected-retrieving ((,class (:background ,ml-active :foreground ,red :bold t))))
      `(w3m-tab-unselected-retrieving ((,class (:background ,ml-inactive :foreground ,red))))
-     `(w3m-tab-unselected-unseen ((,class (:background ,ml-inactive :foreground ,turquoise)))))))
+     `(w3m-tab-unselected-unseen ((,class (:background ,ml-inactive :foreground ,turquoise))))
+
+     ;; Sh mode
+     `(sh-heredoc ((,class (:foreground ,purple))))
+     `(sh-quoted-exec ((,class (:inherit font-lock-string-face))))
+
+     ;; Slime
+     `(slime-repl-inputed-output-face ((,class (:foreground ,red))))
+     `(slime-repl-output-face ((,class (:weight bold :foreground ,green)))))))
 
 (defun bic-velleda-bright ()
   "Bright version of Bic Velleda theme."
