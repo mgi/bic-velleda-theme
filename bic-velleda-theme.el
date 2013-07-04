@@ -48,6 +48,8 @@
      `(region ((,class (:background ,purple))))
      `(warning ((,class (:foreground ,purple :weight bold))))
      `(error ((,class (:foreground ,red :weight bold))))
+     `(success ((,class (:foreground ,green :weight bold))))
+     `(escape-glyph ((,class (:foreground ,brown))))
      `(show-paren-match-face ((,class (:background ,turquoise :foreground ,bg))))
      `(show-paren-mismatch-face ((,class (:background ,red :foreground ,bg))))
      `(isearch ((,class (:background ,red :foreground ,bg))))
