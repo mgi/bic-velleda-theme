@@ -214,7 +214,12 @@
 
      ;; Slime
      `(slime-repl-inputed-output-face ((,class (:foreground ,red))))
-     `(slime-repl-output-face ((,class (:weight bold :foreground ,green)))))))
+     `(slime-repl-output-face ((,class (:weight bold :foreground ,green))))
+
+     ;; Customize
+     `(custom-variable-tag ((,class (:weight bold :foreground ,blue))))
+     `(custom-group-tag ((,class (:height 1.2 :weight bold :foreground ,blue))))
+     `(custom-state ((,class (:foreground ,green)))))))
 
 (defun bic-velleda-bright ()
   "Bright version of Bic Velleda theme."
