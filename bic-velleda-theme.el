@@ -181,6 +181,14 @@
      `(message-cited-text ((,class (:foreground ,brown))))
      `(message-mml ((,class (:foreground ,purple))))
 
+     ;; Customize
+     `(custom-variable-tag ((,class (:weight bold :foreground ,blue))))
+     `(custom-group-tag ((,class (:height 1.2 :weight bold :foreground ,blue))))
+     `(custom-state ((,class (:foreground ,green))))
+     `(custom-button ((,class (:background ,ml-active :foreground ,fg :box (:line-width 2 :style released-button)))))
+     `(custom-button-mouse ((,class (:background ,turquoise :foreground ,fg :box (:line-width 2 :style released-button)))))
+     `(custom-button-pressed ((,class (:background ,ml-active :foreground ,fg :box (:line-width 2 :style pressed-button)))))
+
      ;; EShell
      `(eshell-prompt ((,class (:foreground ,red :bold t))))
      `(eshell-ls-directory ((,class (:inherit dired-directory))))
@@ -212,9 +220,9 @@
      `(w3m-tab-selected-retrieving ((,class (:background ,ml-active :foreground ,red :bold t))))
      `(w3m-tab-unselected-retrieving ((,class (:background ,ml-inactive :foreground ,red))))
      `(w3m-tab-unselected-unseen ((,class (:background ,ml-inactive :foreground ,turquoise))))
-     `(w3m-form-button ((,class (:background ,ml-active :foreground ,fg :box (:line-width 2 :style released-button)))))
-     `(w3m-form-button-mouse ((,class (:background ,turquoise :foreground ,fg :box (:line-width 2 :style released-button)))))
-     `(w3m-form-button-pressed ((,class (:background ,ml-active :foreground ,fg :box (:line-width 2 :style pressed-button)))))
+     `(w3m-form-button ((,class (:inherit custom-button))))
+     `(w3m-form-button-mouse ((,class (:inherit custom-button-mouse))))
+     `(w3m-form-button-pressed ((,class (:inherit custom-button-pressed))))
 
      ;; Sh mode
      `(sh-heredoc ((,class (:foreground ,purple))))
@@ -222,12 +230,7 @@
 
      ;; Slime
      `(slime-repl-inputed-output-face ((,class (:foreground ,red))))
-     `(slime-repl-output-face ((,class (:weight bold :foreground ,green))))
-
-     ;; Customize
-     `(custom-variable-tag ((,class (:weight bold :foreground ,blue))))
-     `(custom-group-tag ((,class (:height 1.2 :weight bold :foreground ,blue))))
-     `(custom-state ((,class (:foreground ,green)))))))
+     `(slime-repl-output-face ((,class (:weight bold :foreground ,green)))))))
 
 (defun bic-velleda-bright ()
   "Bright version of Bic Velleda theme."
