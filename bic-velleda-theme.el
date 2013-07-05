@@ -230,7 +230,15 @@
 
      ;; Slime
      `(slime-repl-inputed-output-face ((,class (:foreground ,red))))
-     `(slime-repl-output-face ((,class (:weight bold :foreground ,green)))))))
+     `(slime-repl-output-face ((,class (:weight bold :foreground ,green))))
+
+     ;; Mingus
+     `(mingus-directory-face ((,class (:inherit dired-directory))))
+     `(mingus-pausing-face ((,class (:foreground ,ml-active))))
+     `(mingus-playing-face ((,class (:foreground ,green))))
+     `(mingus-playlist-face ((,class (:foreground ,brown))))
+     `(mingus-song-file-face ((,class (:foreground ,blue))))
+     `(mingus-stopped-face ((,class (:foreground ,red)))))))
 
 (defun bic-velleda-bright ()
   "Bright version of Bic Velleda theme."
