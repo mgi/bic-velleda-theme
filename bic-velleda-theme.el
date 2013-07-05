@@ -53,10 +53,12 @@
      `(shadow ((,class (:foreground ,brown))))
      `(show-paren-match-face ((,class (:background ,turquoise :foreground ,bg))))
      `(show-paren-mismatch-face ((,class (:background ,red :foreground ,bg))))
-     `(isearch ((,class (:background ,red :foreground ,bg))))
+     `(isearch ((,class (:background ,orange :foreground ,bg))))
+     `(isearch-fail ((,class (:background ,red))))
      `(lazy-highlight ((,class (:background ,turquoise :foreground ,bg))))
      `(link ((,class (:foreground ,blue))))
      `(link-visited ((,class (:foreground ,purple))))
+     `(diary ((,class (:foreground ,red))))
 
      ;; Modeline
      `(mode-line ((,class (:background ,ml-active :foreground ,fg))))
@@ -107,6 +109,8 @@
      `(outline-5 ((,class (:foreground ,purple))))
 
      ;; Gnus
+     `(gnus-server-agent ((,class (:weight bold :foreground ,turquoise))))
+     `(gnus-server-closed ((,class (:foreground ,blue))))
      `(gnus-server-opened ((,class (:weight bold :foreground ,green))))
      `(gnus-server-denied ((,class (:weight bold :foreground ,red))))
      `(gnus-server-offline ((,class (:weight bold :foreground ,orange))))
@@ -162,6 +166,7 @@
      `(gnus-cite-9 ((,class (:foreground ,red))))
      `(gnus-cite-10 ((,class (:foreground ,brown))))
      `(gnus-cite-11 ((,class (:foreground ,orange))))
+     `(gnus-x-face ((,class (:foreground ,fg :background ,bg))))
      `(mm-uu-extract ((,class (:foreground ,fg :background ,green))))
 
      ;; Message
@@ -207,6 +212,9 @@
      `(w3m-tab-selected-retrieving ((,class (:background ,ml-active :foreground ,red :bold t))))
      `(w3m-tab-unselected-retrieving ((,class (:background ,ml-inactive :foreground ,red))))
      `(w3m-tab-unselected-unseen ((,class (:background ,ml-inactive :foreground ,turquoise))))
+     `(w3m-form-button ((,class (:background ,ml-active :foreground ,fg :box (:line-width 2 :style released-button)))))
+     `(w3m-form-button-mouse ((,class (:background ,turquoise :foreground ,fg :box (:line-width 2 :style released-button)))))
+     `(w3m-form-button-pressed ((,class (:background ,ml-active :foreground ,fg :box (:line-width 2 :style pressed-button)))))
 
      ;; Sh mode
      `(sh-heredoc ((,class (:foreground ,purple))))
