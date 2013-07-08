@@ -202,6 +202,9 @@
      `(eshell-ls-readonly ((,class (:foreground ,blue))))
      `(eshell-ls-special ((,class (:foreground ,turquoise :weight bold))))
 
+     ;; Org-mode
+     `(org-hide ((,class (:foreground ,bg))))
+
      ;; w3m
      `(w3m-anchor ((,class (:inherit link))))
      `(w3m-arrived-anchor ((,class (:inherit link-visited))))
