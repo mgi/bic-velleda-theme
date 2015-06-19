@@ -202,6 +202,14 @@
      `(eshell-ls-readonly ((,class (:foreground ,blue))))
      `(eshell-ls-special ((,class (:foreground ,turquoise :weight bold))))
 
+     ;; Term
+     `(term-color-blue ((,class (:background ,blue :foreground ,blue))))
+     `(term-color-cyan ((,class (:background ,turquoise :foreground ,turquoise))))
+     `(term-color-green ((,class (:background ,green :foreground ,green))))
+     `(term-color-magenta ((,class (:background ,purple :foreground ,purple))))
+     `(term-color-red ((,class (:background ,red :foreground ,red))))
+     `(term-color-yellow ((,class (:background ,orange :foreground ,orange))))
+
      ;; Org-mode
      `(org-hide ((,class (:foreground ,bg))))
 
