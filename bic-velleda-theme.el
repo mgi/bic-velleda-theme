@@ -212,6 +212,8 @@
 
      ;; Org-mode
      `(org-hide ((,class (:foreground ,bg))))
+     `(org-agenda-structure ((,class (:foreground ,blue))))
+     `(org-time-grid ((,class (:foreground ,brown))))
 
      ;; w3m
      `(w3m-anchor ((,class (:inherit link))))
