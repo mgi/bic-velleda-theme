@@ -247,10 +247,14 @@
 
      ;; Mingus
      `(mingus-directory-face ((,class (:inherit dired-directory))))
-     `(mingus-pausing-face ((,class (:foreground ,ml-active))))
-     `(mingus-playing-face ((,class (:foreground ,green))))
-     `(mingus-playlist-face ((,class (:foreground ,brown))))
+     `(mingus-artist-face ((,class (:foreground ,purple))))
+     `(mingus-album-face ((,class (:foreground ,brown :underline t))))
+     `(mingus-album-stale-face ((,class (:foreground ,brown))))
      `(mingus-song-file-face ((,class (:foreground ,blue))))
+     `(mingus-playlist-face ((,class (:foreground ,brown))))
+     `(mingus-mark-face ((,class (:foreground ,turquoise))))
+     `(mingus-playing-face ((,class (:foreground ,green))))
+     `(mingus-pausing-face ((,class (:foreground ,ml-active))))
      `(mingus-stopped-face ((,class (:foreground ,red)))))))
 
 (defun bic-velleda-bright ()
