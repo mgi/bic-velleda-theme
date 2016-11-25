@@ -67,7 +67,7 @@
 
      ;; Font lock
      `(font-lock-builtin-face ((,class (:foreground ,orange))))
-     `(font-lock-comment-face ((,class (:foreground ,brown))))
+     `(font-lock-comment-face ((,class (:foreground ,fg :weight bold))))
      `(font-lock-constant-face ((,class (:foreground ,green))))
      `(font-lock-function-name-face ((,class (:foreground ,orange :weight bold))))
      `(font-lock-keyword-face ((,class (:foreground ,turquoise))))
