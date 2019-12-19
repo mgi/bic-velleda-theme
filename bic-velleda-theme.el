@@ -45,7 +45,7 @@
      ;; Highlighting
      `(fringe ((,class (:background ,bg))))
      `(highlight ((,class (:background ,turquoise))))
-     `(region ((,class (:background ,purple))))
+     `(region ((,class (:background "grey90"))))
      `(warning ((,class (:foreground ,purple :weight bold))))
      `(error ((,class (:foreground ,red :weight bold))))
      `(success ((,class (:foreground ,green :weight bold))))
