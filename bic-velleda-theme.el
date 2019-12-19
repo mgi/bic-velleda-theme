@@ -274,6 +274,9 @@
       (bic-velleda-dark)
     (bic-velleda-bright)))
 
+;; Default to bright
+(bic-velleda-bright)
+
 (provide-theme 'bic-velleda)
 
 ;; Local Variables:
